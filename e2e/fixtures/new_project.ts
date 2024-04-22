@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'; // Importing Faker.js
 export async function newProject(page: Page) {
     await page.goto('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/dashboard/active');
     await page.getByRole('button', { name: 'Add new project' }).click();
-     // Generate random project name and description using Faker.js
+    // Generate random project name and description using Faker.js
     const projectName = faker.commerce.productName(); // Generates a random product name
     const projectDescription = faker.lorem.sentence(); // Generates a random sentence for project description
     await page.getByPlaceholder('Enter project name').click();
