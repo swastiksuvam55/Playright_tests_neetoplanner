@@ -1,6 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 import { login } from '../fixtures/login';
 import { newProject } from '../fixtures/new_project';
+import { verifySameUser } from '../fixtures/verify_assigned_user_tasks_same_user';
 
 test.describe('Login Functionality', () => {
   test('should successfully login to neetoPlanner', async ({ page }: { page: Page }) => {
@@ -18,4 +19,11 @@ test.describe('New Project creation successful', () => {
     });
 });
 
+test.describe('verify assigned user tasks with same user', () => {
+    test('should successfully able to assign new projects to the same user', async ({ page }: { page: Page }) => {
+        await login(page);
+        await verifySameUser(page);
+        console.log('verified same user');
+    });
+});
 
