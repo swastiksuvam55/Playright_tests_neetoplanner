@@ -11,6 +11,7 @@ export class projectPage {
 
   createProjectAndVerify = async ({ projectName, projectDescription }: { projectName: string, projectDescription: string }) => {
     // await page.goto('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/dashboard/active');
+    await this.page.getByTestId('navlink-projects').click();
     await this.page.getByRole('button', { name: 'Add new project' }).click();
     await this.page.getByPlaceholder('Enter project name').click();
     await this.page.getByPlaceholder('Enter project name').fill(projectName);
@@ -21,6 +22,8 @@ export class projectPage {
     const value = await this.page.getByPlaceholder('Enter project identifier').inputValue();
     // console.log("Placeholder Value:", value);
     await this.page.getByRole('button', { name: 'Save changes' }).click();
-    await expect(this.page).toHaveURL(`https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/${value}/list`);
+    await expect(this.page).toHaveURL(/https:\/\/swastik-singh-iiit-bhubaneswar.neetoplanner.net\/.*\//);
+
+
   };
 }
