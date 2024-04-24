@@ -3,7 +3,7 @@
 import { test as base } from "@playwright/test";
 import LoginPage from "../poms/login";
 import { projectPage } from "../poms/project";
-import { TaskPage } from "../poms/task_verify_same_user";
+import { TaskPage } from "../poms/createTasks";
 import { verifyTaskPage } from "../poms/verifyTasks";
 import { clearTaskPage } from "../poms/clearTasks";
 
