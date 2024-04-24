@@ -22,7 +22,7 @@ export class differentTaskPage {
         await this.page.getByTestId('close-button').click();
         await this.page.getByRole('button', { name: 'List' }).click();
         await this.page.getByRole('row', { name: new RegExp(`${taskName}` )}).getByRole('button').nth(2).click();
-        await this.page.getByRole('button', { name: 'swastik singh standard' }).click();
+        await this.page.getByRole('button', { name: 'swastik suvam singh standard' }).click();
         // await this.page.getByRole('row', { name: new RegExp(`${taskName}`) }).getByRole('button').nth(2).click();
         // await this.page.getByRole('button', { name: 'swastik singh (you)' }).click();
 

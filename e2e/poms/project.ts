@@ -22,7 +22,7 @@ export class projectPage {
     const value = await this.page.getByPlaceholder('Enter project identifier').inputValue();
     // console.log("Placeholder Value:", value);
     await this.page.getByRole('button', { name: 'Save changes' }).click();
-    await expect(this.page).toHaveURL(/https:\/\/swastik-singh-iiit-bhubaneswar.neetoplanner.net\/.*\//);
+    await expect(this.page).toHaveURL(/https:\/\/swastik-suvam-singh.neetoplanner.net\/.*\//);
 
 
   };
