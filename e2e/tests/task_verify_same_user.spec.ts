@@ -39,6 +39,8 @@ test.describe("Tasks page", () => {
             await loginPage.loginAndVerifyUser({
                 email: "cpts9gnqty9-planner-swastik_singh-iiit_bhubaneswar@bigbinary.com",
             });
+                await page.waitForURL('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/');
+                await page.waitForURL('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/dashboard/active');
         });
         // await page.pause();
 

@@ -6,6 +6,7 @@ import { projectPage } from "../poms/project";
 import { TaskPage } from "../poms/createTasks";
 import { verifyTaskPage } from "../poms/verifyTasks";
 import { clearTaskPage } from "../poms/clearTasks";
+import { differentTaskPage } from "../poms/createTasks_assign_different_user";
 
 interface ExtendedFixtures {
   loginPage: LoginPage;
@@ -13,6 +14,7 @@ interface ExtendedFixtures {
   TaskPage: TaskPage;
   verifyTaskPage: verifyTaskPage;
   clearTaskPage: clearTaskPage;
+  differentTaskPage: differentTaskPage,
 }
 
 // export const test = base.extend<ExtendedFixtures>({
@@ -43,4 +45,8 @@ export const test = base.extend<ExtendedFixtures>({
         const clearTask = new clearTaskPage(page);
         await use(clearTask);
     },
+    differentTaskPage: async ({ page }, use) => {
+      const differenttaskPage = new differentTaskPage(page);
+      await use(differenttaskPage);
+  },
   });

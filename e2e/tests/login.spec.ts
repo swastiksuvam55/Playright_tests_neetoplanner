@@ -13,6 +13,9 @@ test.describe("Login page", () => {
             email: "cpts9gnqty9-planner-swastik_singh-iiit_bhubaneswar@bigbinary.com",
         }));
 
+        await test.step("Step 4: wait for the user dashboard", () => page.waitForURL('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/') );
+        
+
         // Optional: Add verification steps here if necessary
     });
 });
