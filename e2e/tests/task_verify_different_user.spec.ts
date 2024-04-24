@@ -43,7 +43,7 @@ test.describe("Verify different User", () => {
                 email: "cpts9gnqty9-planner-swastik_suvam_singh-iiit_bhubaneswar+standard@bigbinary.com",
             });
             // await page.getByText("swastik singh standard").click();
-            await page.pause();
+            // await page.pause();
             // await page.waitForURL('https://swastik-singh-iiit-bhubaneswar.neetoplanner.net/');
             await page.waitForURL('https://swastik-suvam-singh.neetoplanner.net/dashboard/active');
         });
